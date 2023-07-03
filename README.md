@@ -1,3 +1,9 @@
+This code was copied from the https://github.com/kentcdodds/jest-cypress-react-babel-webpack/tree/tjs/jest-00 repo/branch
+
+You have the option to diff two of the branches to see the changes, e.g. https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-00...tjs/jest-01, but I wanted to have a commit history while doing so, so I'm able to provide helpful commit messages as the tutorial unfolds
+
+<hr />
+
 <h1 align="center">
   Jest and Cypress with React, Babel, and Webpack
 </h1>
