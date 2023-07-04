@@ -15,7 +15,7 @@ test('renders', () => {
   //         />
   //     </div>
   // </body>
-  const { container } = render(<AutoScalingText />)
+  const {container} = render(<AutoScalingText />)
 
   // There are a few ways to assert a class name e.g.
   expect(container.getElementsByClassName('autoScalingText')).toHaveLength(1)
