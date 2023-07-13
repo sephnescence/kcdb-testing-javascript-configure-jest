@@ -65,6 +65,7 @@
    },
    ```
 1. There are tools that you can use with Travis CI, Circle CI, etc. that let you show a visual representation of coverage if you so desire. I've generally never done this, but if you want to it in your CI tool of choice, just make use of the respective `after` step. See https://testingjavascript.com/lessons/jest-report-jest-test-coverage-to-codecov-through-travisci-7623e301
+1. If you want to introduce some magic like running Jest in watch mode by default locally and in coverage mode in CI tools, then follow https://testingjavascript.com/lessons/jest-run-jest-watch-mode-by-default-locally-with-is-ci-cli. There's a package called `is-ci-cli` that allows you to call is-cli with two arguments. I don't want to do this personally, but I've put a reference here for completeness
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-14...tjs/jest-15
