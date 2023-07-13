@@ -5,11 +5,6 @@ import {ThemeProvider} from '@emotion/react'
 import * as themes from '../src/themes'
 
 function render(ui, {theme = themes.dark, ...options} = {}) {
-  console.log('wtffff')
-  console.log('wtffff')
-  console.log(theme)
-  console.log('wtffff')
-  console.log('wtffff')
   function Wrapper({children}) {
     return <ThemeProvider theme={theme}>{children}</ThemeProvider>
   }

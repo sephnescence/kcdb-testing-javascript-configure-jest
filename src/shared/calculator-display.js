@@ -24,15 +24,6 @@ function CalculatorDisplay({value, ...props}) {
     typeof window === 'undefined' ? 'en-US' : window.navigator.language,
   )
 
-  // console.log('HERE!!!')
-  // console.log('HERE!!!')
-  // console.log((({theme}) => ({
-  //   color: theme.displayTextColor,
-  //   background: theme.displayBackgroundColor,
-  // }))({theme: themes.dark}))
-  // console.log('HERE!!!')
-  // console.log('HERE!!!')
-
   return (
     <DisplayContainer {...props}>
       <AutoScalingText>{formattedValue}</AutoScalingText>
