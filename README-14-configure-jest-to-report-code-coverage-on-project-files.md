@@ -32,6 +32,11 @@
    explanation on
    https://testingjavascript.com/lessons/jest-analyze-jest-code-coverage-reports.
    Alternatively, read up on Babel Istanbul
+1. An interesting gotcha, people can annotate the code with this to ignore it in
+   the coverage report. I'm not sure if there's an eslint rule to prevent this
+   ```
+   /* istanbul-ignore-next */
+   ```
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-13...tjs/jest-14
