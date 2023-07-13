@@ -1,27 +1,26 @@
 import React from 'react'
+import {useTheme} from '@emotion/react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
-import * as themes from '../themes'
 import AutoScalingText from './auto-scaling-text'
 import {getFormattedValue} from './utils'
-
-const DisplayContainer = styled.div(
-  {
-    position: 'relative',
-    lineHeight: '130px',
-    fontSize: '6em',
-    flex: '1',
-  },
-  ({theme}) => ({
-    color: theme.displayTextColor,
-    background: theme.displayBackgroundColor,
-  }),
-)
 
 function CalculatorDisplay({value, ...props}) {
   const formattedValue = getFormattedValue(
     value,
     typeof window === 'undefined' ? 'en-US' : window.navigator.language,
+  )
+
+  const theme = useTheme()
+  const DisplayContainer = styled.div(
+    {
+      position: 'relative',
+      lineHeight: '130px',
+      fontSize: '6em',
+      flex: '1',
+      color: theme.displayTextColor,
+      background: theme.displayBackgroundColor,
+    }
   )
 
   return (
