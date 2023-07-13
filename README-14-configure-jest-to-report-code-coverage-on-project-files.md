@@ -28,6 +28,10 @@
    test running, so will now pick up files with 0% coverage
 1. Now when you run `nom run test:coverage` is should ignore the `test`
    directory
+1. If you're interested to learn how Jest does this coverage. You'll find an
+   explanation on
+   https://testingjavascript.com/lessons/jest-analyze-jest-code-coverage-reports.
+   Alternatively, read up on Babel Istanbul
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-13...tjs/jest-14
