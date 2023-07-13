@@ -26,7 +26,10 @@
    `)
    ```
 
-1. If we were to then update the test, e.g. `value="0.2"` and run `npm t` again, the snapshot would fail, resulting in a `1 snapshot failed` message. We can update the snapshot by passing `-u` to Jest. This is done by running `npm t -- -u`
+1. If we were to then update the test, e.g. `value="0.2"` and run `npm t` again,
+   the snapshot would fail, resulting in a `1 snapshot failed` message. We can
+   update the snapshot by passing `-u` to Jest. This is done by running
+   `npm t -- -u`
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-05...tjs/jest-06

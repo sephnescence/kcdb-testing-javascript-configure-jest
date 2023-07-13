@@ -12,16 +12,14 @@ function CalculatorDisplay({value, ...props}) {
   )
 
   const theme = useTheme()
-  const DisplayContainer = styled.div(
-    {
-      position: 'relative',
-      lineHeight: '130px',
-      fontSize: '6em',
-      flex: '1',
-      color: theme.displayTextColor,
-      background: theme.displayBackgroundColor,
-    }
-  )
+  const DisplayContainer = styled.div({
+    position: 'relative',
+    lineHeight: '130px',
+    fontSize: '6em',
+    flex: '1',
+    color: theme.displayTextColor,
+    background: theme.displayBackgroundColor,
+  })
 
   return (
     <DisplayContainer {...props}>
