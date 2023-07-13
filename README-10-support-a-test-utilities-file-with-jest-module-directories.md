@@ -2,12 +2,12 @@
 Essentially he did another commit that added themes already**
 
 1. Install emotion-theming
-   ```
+   ```js
    npm i -D @emotion/react
    ```
 1. We need to create a `src/themes.js` file with the following content
 
-   ```
+   ```js
    export const dark = {
        displayTextColor: 'white',
        displayBackgroundColor: '#1c191c',
@@ -22,13 +22,13 @@ Essentially he did another commit that added themes already**
 1. We need to update `src/app.js` to include `ThemeProvider` and controls to
    toggle the theme. So what was simply
 
-   ```
+   ```js
    <Calculator />
    ```
 
    needs to become
 
-   ```
+   ```js
     import {ThemeProvider} from '@emotion/react'
     import * as themes from './themes'
 
@@ -68,7 +68,7 @@ Essentially he did another commit that added themes already**
 1. `src/shared/calculator-display.js` needs to be updated to make use of themes
    as well
 
-   ```
+   ```js
    import styled from '@emotion/styled'
 
    const DisplayContainer = styled.div(
@@ -99,7 +99,7 @@ Essentially he did another commit that added themes already**
    `render` method that react testing library exposes, and wraps that all in the
    providers, calling react testing library render at the end as normal
 
-   ```
+   ```js
    import React from 'react'
    import PropTypes from 'prop-types'
    import {render as rtlRender} from '@testing-library/react'
@@ -124,7 +124,7 @@ Essentially he did another commit that added themes already**
 
    b) Update `calculator-display.test.js` to use the new render method
 
-   ```
+   ```js
    import {render} from 'calculator-test-utils'
    ```
 
@@ -133,7 +133,7 @@ Essentially he did another commit that added themes already**
    but for the sake of not having to look elsewhere, this is the change you need
    to add to `jest.config.js`
 
-   ```
+   ```js
    module.exports = {
        testEnvironment: [path.join(__dirname, 'test')],
    }
@@ -142,7 +142,7 @@ Essentially he did another commit that added themes already**
    and this is the change you need to add to `webpack.config.js`. Apparently we
    weren't directed to do this in the unit, but I'll do it anyways for fun
 
-   ```
+   ```js
    module.exports = {
        resolve: {
            modules: [path.join(__dirname, 'test')],
@@ -151,7 +151,7 @@ Essentially he did another commit that added themes already**
    ```
 
 1. We need add this to `jsconfig.json`
-   ```
+   ```js
    {
        "compilerOptions": {
            "paths": {
@@ -163,11 +163,11 @@ Essentially he did another commit that added themes already**
    ```
 1. We need to install another package to have eslint use `jest.config.js` to
    figure out how to import files
-   ```
+   ```js
    npm i -D eslint-import-resolver-jest
    ```
    and update `.eslintrc.js` to add these to `modules.exports`
-   ```
+   ```js
    {
      files: ['**/__tests__/**'],
      settings: {
@@ -184,11 +184,11 @@ Essentially he did another commit that added themes already**
 1. You might also note that the testing here is done specifically on the dark
    theme. We can allow the calculator to use the white theme by making this
    update to `calculator-test-utils`
-   ```
+   ```js
    function render(ui, {...options} = {}) {
    ```
    to
-   ```
+   ```js
    function render(ui, {theme = themes.dark, ...options} = {}) {
    ```
    This way, the theme can be passed in as a prop

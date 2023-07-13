@@ -4,7 +4,7 @@
 1. The example we were told to use had an `import` statement, which isn't
    something that JS does off the bat. The fix is explained later
 
-   ```
+   ```js
    import { getFormattedValue } from '../utils'
 
    test('formats the value', () => {
@@ -16,7 +16,7 @@
    tests. Outside of tests, we'll let webpack do the compiling, but this way, we
    don't need to involve webpack, and can just enjoy that jest refers to babel
    when running
-   ```
+   ```js
    const isTest = String(process.env.NODE_ENV) === 'test'
    ['@babel/preset-env', {modules: isTest ? 'commonjs' : false}]
    ```

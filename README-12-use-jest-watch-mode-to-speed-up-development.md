@@ -1,7 +1,7 @@
 1. You can run jest in watch mode, which will allow you to monitor tests that
    will get affected by files you've changed since the last commit. If it
    doesn't exist already in `package.json`, add this in
-   ```
+   ```js
    {
        "scripts": {
            "test:watch": "jest --watch",

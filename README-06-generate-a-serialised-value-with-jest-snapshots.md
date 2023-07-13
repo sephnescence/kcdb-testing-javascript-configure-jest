@@ -1,7 +1,7 @@
 1. We will create a test here that uses snapshots. My favourite thing. LOL. That
    said, Kent has something amazing to show us...
 
-   ```
+   ```js
    test('renders', () => {
       const {container} = render(<CalculatorDisplay value="0" />)
       expect(container.firstChild).toMatchInlineSnapshot()
@@ -10,7 +10,7 @@
 
 1. Run `npm t` to have the snapshot generated, resulting in this code
 
-   ```
+   ```js
    expect(container.firstChild).toMatchInlineSnapshot(`
       <div
          class="css-lq9ahq-calculator-display--CalculatorDisplay"

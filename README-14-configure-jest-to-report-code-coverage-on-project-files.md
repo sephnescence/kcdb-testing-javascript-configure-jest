@@ -1,6 +1,6 @@
 1. We can configure Jest to provide us with a coverage report! Add the following
    to `package.json` to get started
-   ```
+   ```js
    {
        "scripts": {
            "test:coverage": "jest --coverage",
@@ -19,7 +19,7 @@
    reflection of your coverage as it will always be 100%. So we'll need a way to
    let Jest know which folders to run coverage on. Add the following to
    `jest.config.js`
-   ```
+   ```js
    module.exports = {
        collectCoverageFrom: ['**/src/**/*.js'],
    }
@@ -34,7 +34,7 @@
    Alternatively, read up on Babel Istanbul
 1. An interesting gotcha, people can annotate the code with this to ignore it in
    the coverage report. I'm not sure if there's an eslint rule to prevent this
-   ```
+   ```js
    /* istanbul-ignore-next */
    ```
 

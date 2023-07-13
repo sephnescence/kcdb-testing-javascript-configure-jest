@@ -11,18 +11,18 @@
    of `autoScalingText`. If we added an S at the end, `styles.autoScalingGroups`
    we'd get a class name of `autoScalingTexts` instead
 1. To make this happen we just need to make another update to `jest.config.js`
-   ```
+   ```js
    '\\.module\\.css': 'identity-obj-proxy',
    ```
 1. Kent just used the equivalent of a console log to demonstrate it, but why not
    make it part of the actual test?
-   ```
+   ```js
    const {debug} = render(<AutoScalingText />)
    debug()
    ```
 1. There are a few ways to assert a class name. e.g.
 
-   ```
+   ```js
    expect(container.getElementsByClassName('autoScalingText')).toHaveLength(1)
 
    expect(container.firstChild.classList.contains('autoScalingText')).toBe(true)

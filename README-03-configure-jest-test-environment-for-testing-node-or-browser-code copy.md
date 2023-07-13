@@ -2,7 +2,7 @@
    the tests with `npm t -- --env=node`
 1. We can skip having to pass in that flag by creating a file called
    `jest.config.js` and saying what environment we want there
-   ```
+   ```js
    module.exports = {
      testEnvironment: 'jest-environment-node',
    }

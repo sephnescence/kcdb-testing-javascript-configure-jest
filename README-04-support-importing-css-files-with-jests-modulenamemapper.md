@@ -13,15 +13,16 @@
 1. Now we can install react testing library and run tests. We got an error about
    unexpected tokens as it didn't like the css. This is where Kent suggests
    essentially hacking the build process to make css not work...
+1. We made an empty file called `test/style-mock.js` and added the following
+   ```js
+      module.exports = {}
+   ```
 1. We used the `moduleNameMapper` option in `jest.config.js` to point css at a
    pretty empty file called `test/style-mock.js`
-   ```
-   moduleNameMapper: {
-     '\\.css$': require.resolve('./test/style-mock.js'),
-   },
-   ```
-   ```
-   module.exports = {}
+   ```js
+      moduleNameMapper: {
+      '\\.css$': require.resolve('./test/style-mock.js'),
+      },
    ```
 1. The tests should pass now. But to reiterate, styling is gone completely. You
    can test the dom, but to test styling you should be doing visual regression

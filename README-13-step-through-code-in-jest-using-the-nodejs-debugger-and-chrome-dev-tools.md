@@ -1,7 +1,7 @@
 1. Chrome is able to hook into usages of `debugger` in your Jest test, so if
    you're having trouble with a test, you can walk through it like you could in
    a Java debug session for example. Simply add the following to `package.json`
-   ```
+   ```js
    {
        "scripts": {
            "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch"
@@ -14,7 +14,7 @@
    works some three years later is a bit different
 1. So let's chuck `debugger` into
    `src/shared/__tests__/calculator-display.test.js`
-   ```
+   ```js
    test('renders light mode', () => {
        debugger
        const {container} = render(<CalculatorDisplay value="0.2" />, {
@@ -22,7 +22,7 @@
    ```
 1. Now in the terminal we run `npm run test:debug`
 1. You'll see in the terminal that it's now listening on a port for you. e.g.
-   ```
+   ```js
    Debugger listening on ws://127.0.0.1:9229/6eec0886-b479-48ac-9eeb-3a26093bf8a5
    ```
 1. If you go to Chrome now and open the dev tools, you'll see a Node icon on the

@@ -15,7 +15,7 @@
    }
    ```
 1. Now when we run `npm run test:coverage`, we'll get the following errors
-   ```
+   ```js
    Jest: "global" coverage threshold for statements (100%) not met: 31.03%
    Jest: "global" coverage threshold for branches (100%) not met: 24%
    Jest: "global" coverage threshold for lines (100%) not met: 31.25%
@@ -56,7 +56,7 @@
    global rules now throw errors. This is because anything you explicitly
    include in `coverageThreshold` no longer counts towards `global`, so you'll
    need to update `global` accordingly. In this case,
-   ```
+   ```js
    global: {
      statements: 25,
      branches: 13,
