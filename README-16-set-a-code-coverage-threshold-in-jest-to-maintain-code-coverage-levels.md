@@ -15,7 +15,7 @@
    }
    ```
 1. Now when we run `npm run test:coverage`, we'll get the following errors
-   ```js
+   ```
    Jest: "global" coverage threshold for statements (100%) not met: 31.03%
    Jest: "global" coverage threshold for branches (100%) not met: 24%
    Jest: "global" coverage threshold for lines (100%) not met: 31.25%
@@ -64,6 +64,7 @@
      functions: 27,
    },
    ```
+1. There are tools that you can use with Travis CI, Circle CI, etc. that let you show a visual representation of coverage if you so desire. I've generally never done this, but if you want to it in your CI tool of choice, just make use of the respective `after` step. See https://testingjavascript.com/lessons/jest-report-jest-test-coverage-to-codecov-through-travisci-7623e301
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-14...tjs/jest-15
