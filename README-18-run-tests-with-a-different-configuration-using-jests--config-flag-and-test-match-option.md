@@ -22,10 +22,41 @@
     collectCoverageFrom: ['**/src/**/*.js'],
     }
     ```  
-    `test/jest.server.js`  
+    `test/jest.client.js`  
     ```js
-    echo
+    module.exports = {
+        ...require('./jest-common'),
+        testEnvironment: 'jest-environment-jsdom',
+        setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+        snapshotSerializers: ['jest-emotion'],
+        coverageThreshold: {
+            global: {
+            statements: 15,
+            branches: 10,
+            functions: 15,
+            lines: 15,
+            },
+            './src/shared/utils.js': {
+            statements: 100,
+            branches: 80,
+            functions: 100,
+            lines: 100,
+            },
+        },
+    }
+    ```  
+    `jest.server.js`
+    ```js
+    const path = require('path')
+
+    module.exports = {
+        ...require('./jest-common'),
+        coverageDirectory: path.join(__dirname, '../coverage/server'),
+        testEnvironment: 'jest-environment-node',
+        testMatch: ['**/__server_tests__/**/*.js'],
+    }
     ```
+1. The idea here is that you can make a new directory called `__server_tests__` if you want to have server side specific tests
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-17...tjs/jest-18
