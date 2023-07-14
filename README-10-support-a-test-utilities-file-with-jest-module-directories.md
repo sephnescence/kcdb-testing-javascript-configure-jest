@@ -9,13 +9,13 @@ Essentially he did another commit that added themes already**
 
    ```js
    export const dark = {
-       displayTextColor: 'white',
-       displayBackgroundColor: '#1c191c',
+     displayTextColor: 'white',
+     displayBackgroundColor: '#1c191c',
    }
 
    export const light = {
-       displayTextColor: '#1c191c',
-       displayBackgroundColor: 'white',
+     displayTextColor: '#1c191c',
+     displayBackgroundColor: 'white',
    }
    ```
 
@@ -107,14 +107,14 @@ Essentially he did another commit that added themes already**
    import * as themes from '../src/themes'
 
    function render(ui, {theme = themes.dark, ...options} = {}) {
-   function Wrapper({children}) {
+     function Wrapper({children}) {
        return <ThemeProvider theme={theme}>{children}</ThemeProvider>
-   }
-   Wrapper.propTypes = {
+     }
+     Wrapper.propTypes = {
        children: PropTypes.node,
-   }
+     }
 
-   return rtlRender(ui, {wrapper: Wrapper, ...options})
+     return rtlRender(ui, {wrapper: Wrapper, ...options})
    }
 
    export * from '@testing-library/react'
@@ -135,7 +135,7 @@ Essentially he did another commit that added themes already**
 
    ```js
    module.exports = {
-       testEnvironment: [path.join(__dirname, 'test')],
+     testEnvironment: [path.join(__dirname, 'test')],
    }
    ```
 
@@ -144,9 +144,9 @@ Essentially he did another commit that added themes already**
 
    ```js
    module.exports = {
-       resolve: {
-           modules: [path.join(__dirname, 'test')],
-       },
+     resolve: {
+       modules: [path.join(__dirname, 'test')],
+     },
    }
    ```
 

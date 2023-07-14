@@ -5,19 +5,15 @@
    example, the code can load straight from node_modules, src, or shared
    ```js
    module.exports = {
-       resolve: {
-           modules: [
-               'node_modules',
-               path.join(__dirname, 'src'),
-               'shared'
-           ],
-       },
+     resolve: {
+       modules: ['node_modules', path.join(__dirname, 'src'), 'shared'],
+     },
    }
-   ```js
+   ```
 1. Update jest.config.js and add the following. There will be other keys in your
    file already so don't delete them
 
-   ```js
+   ````js
    const path = require('path')
 
    module.exports = {
@@ -29,10 +25,12 @@
    }
    ```js
 
+   ````
+
 1. So now in the following test, the Calculator component imports
    CalculatorDisplay, but the import is simply
 
-   ```js
+   ````js
    import CalculatorDisplay from 'calculator-display'
    ```js
 
@@ -47,7 +45,7 @@
    test('renders', () => {
        render(<Calculator />)
    })
-   ```js
+   ````
 
 Refer to
 https://github.com/kentcdodds/jest-cypress-react-babel-webpack/compare/tjs/jest-07...tjs/jest-08

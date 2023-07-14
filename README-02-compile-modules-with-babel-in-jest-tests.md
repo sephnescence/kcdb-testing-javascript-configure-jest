@@ -5,10 +5,10 @@
    something that JS does off the bat. The fix is explained later
 
    ```js
-   import { getFormattedValue } from '../utils'
+   import {getFormattedValue} from '../utils'
 
    test('formats the value', () => {
-       expect(getFormattedValue('1234.0')).toBe('1,234.0')
+     expect(getFormattedValue('1234.0')).toBe('1,234.0')
    })
    ```
 
@@ -17,8 +17,9 @@
    don't need to involve webpack, and can just enjoy that jest refers to babel
    when running
    ```js
-   const isTest = String(process.env.NODE_ENV) === 'test'
-   ['@babel/preset-env', {modules: isTest ? 'commonjs' : false}]
+   const isTest =
+     String(process.env.NODE_ENV) ===
+     'test'[('@babel/preset-env', {modules: isTest ? 'commonjs' : false})]
    ```
 
 Refer to

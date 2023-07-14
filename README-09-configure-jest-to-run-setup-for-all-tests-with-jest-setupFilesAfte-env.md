@@ -9,9 +9,7 @@
 1. Update jest.config.js with this
    ```js
    module.exports = {
-       setupFilesAfterEnv: [
-           '@testing-library/jest-dom/extend-expect'
-       ],
+     setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
    }
    ```
 1. An example of new calls we have access to
@@ -34,8 +32,8 @@
    ```js
    expect(received).toBe(expected) // Object.is equality
 
-   Expected: "ACD"
-   Received: "AC"
+   Expected: 'ACD'
+   Received: 'AC'
    ```
 
 1. There are alternative ways to do this, but they're less efficient, but also

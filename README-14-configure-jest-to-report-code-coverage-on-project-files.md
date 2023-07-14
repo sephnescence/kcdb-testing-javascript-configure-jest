@@ -21,7 +21,7 @@
    `jest.config.js`
    ```js
    module.exports = {
-       collectCoverageFrom: ['**/src/**/*.js'],
+     collectCoverageFrom: ['**/src/**/*.js'],
    }
    ```
    Additionally, this forces Jest to report on files it didn't discover during

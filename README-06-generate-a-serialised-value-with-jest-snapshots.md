@@ -3,8 +3,8 @@
 
    ```js
    test('renders', () => {
-      const {container} = render(<CalculatorDisplay value="0" />)
-      expect(container.firstChild).toMatchInlineSnapshot()
+     const {container} = render(<CalculatorDisplay value="0" />)
+     expect(container.firstChild).toMatchInlineSnapshot()
    })
    ```
 

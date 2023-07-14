@@ -15,7 +15,7 @@
    essentially hacking the build process to make css not work...
 1. We made an empty file called `test/style-mock.js` and added the following
    ```js
-      module.exports = {}
+   module.exports = {}
    ```
 1. We used the `moduleNameMapper` option in `jest.config.js` to point css at a
    pretty empty file called `test/style-mock.js`
